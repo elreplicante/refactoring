@@ -12,6 +12,12 @@ describe Observer do
     expect(subject.observers).to eq 1
   end
 
+  it "not registers if nil" do
+    subject.register nil
+
+    expect(subject.observers).to eq 0
+  end
+
   it "unregisters from a subject" do
     other_observer = Observer.new
 

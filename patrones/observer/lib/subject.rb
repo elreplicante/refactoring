@@ -5,7 +5,7 @@ class Subject
   end
 
   def register observer
-    @observers << observer
+    @observers << observer if observer
   end
 
   def unregister observer
